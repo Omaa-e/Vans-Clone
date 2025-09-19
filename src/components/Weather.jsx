@@ -3,7 +3,7 @@ import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 
 const Weather = () => {
   return (
-    <div className='w-full fixed'>
+    <div className='w-full fixed bg-white z-10'>
         <div className='px-5'>
              <div className='flex justify-between pt-2 items-center'>
                 <div className='flex-1'>
