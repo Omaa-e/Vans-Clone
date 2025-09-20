@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from './components/Navbar'
 import Shop from './components/Shop'
 import Weather from './components/Weather'
