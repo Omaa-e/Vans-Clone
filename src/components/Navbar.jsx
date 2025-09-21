@@ -1,17 +1,17 @@
-import React from 'react'
-import { HiOutlineMenu } from "react-icons/hi"
+import React, {useState} from 'react'
+import { HiOutlineMenu,HiOutlineSearch,HiOutlineShoppingCart } from "react-icons/hi"
 import img from '../assets/vans.png'
-import { HiOutlineSearch } from "react-icons/hi";
-import { HiOutlineShoppingCart } from "react-icons/hi";
 import { CgUser } from "react-icons/cg";
 import { HiOutlineSparkles } from "react-icons/hi2";
+import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div className='w-full items-center '>
         {/* left menu */}
         <div className=' relative flex justify-between  items-center lg:px-3 py-2 space-x-4'>
-            <div className='hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block  '>
+            <div onClick={() => setMenuOpen(true) } className='hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block  '>
                 <HiOutlineMenu className='w-7 h-7 hover:bg-[#B9B9B9] ' />
  
             </div>
@@ -32,6 +32,19 @@ const Navbar = () => {
             </div>
 
         </div>
+
+
+
+        {/* Menu clicked */}
+        {menuOpen && (
+            <div className= 'fixed inset-0  bg-opacity-50'>
+                <div>
+                    <button onClick={() => setMenuOpen(false)} className='text-right mb-12'>
+                        <GrClose className='w-8 h-8 text-right bg-white m-4'/>
+                    </button>
+                </div>
+            </div>
+        )}
     </div>
   )
 }
