@@ -1,12 +1,13 @@
 import React from 'react'
 import img1 from '../assets/Womens Shop.avif'
 import img2 from '../assets/Kids Shop.avif'
-import vid1 from '../assets/Mens shop.webm'
+import vid1 from '../assets/videoo.webm'
 
 const Shops = () => {
   return (
     <div className='w-full '>
         <div className='flex md:grid  md:grid-cols-3 pt-0.5 overflow-x-scroll hide-scrollbar'>
+            {/* the overflow helps the grid/flex images not to go out of the screen frame */}
             <div className='relative pr-0.5'>
                 <div className='w-112 sm:w-150 md:w-full md:h-[25%] '>
                     <img className='w-full object-cover' src={img1} alt="" />
