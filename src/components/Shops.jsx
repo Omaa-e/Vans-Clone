@@ -6,7 +6,7 @@ import vid1 from '../assets/videoo.webm'
 const Shops = () => {
   return (
     <div className='w-full '>
-        <div className='flex md:grid  md:grid-cols-3 pt-0.5 overflow-x-scroll hide-scrollbar'>
+        <div className='flex md:grid  md:grid-cols-3 pt-1 pb-4 overflow-x-scroll hide-scrollbar'>
             {/* the overflow helps the grid/flex images not to go out of the screen frame */}
             <div className='relative pr-0.5'>
                 <div className='w-112 sm:w-150 md:w-full md:h-[25%] '>

@@ -7,14 +7,16 @@ import Hero from './components/Hero'
 import Shops from './components/Shops'
 import Collections from './components/Collections'
 import Background from './components/Background'
+import Celebrate from './components/Celebrate'
 
 const App = () => {
   return (
     <div className='font-work-sans'>
       <Navbar />
       <Hero />
-      <Background/>
+      {/* <Background/> */}
       <Shops/>
+      <Celebrate/>
       <Collections/>
       {/* <Shop/>
       <Weather/>

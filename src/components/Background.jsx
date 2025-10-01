@@ -5,9 +5,9 @@ const Background = () => {
   return (
     <div className='w-full'>
         <div className='relative pt-3'>
-            <img className='w-full h-[600px] object-cover' src={bgImg} alt="" />
+            <img className='w-full object-cover' src={bgImg} alt="" />
         </div>
-        <div className='absolute bottom-3 left-5'>
+        <div className='absolute left-5'>
             <h1 className='text-4xl md:w-[89%] md:text-4xl lg:w-[70%] lg:text-6xl font-extrabold xl:w-[100%] leading-tight capitalize'>
                 United Through Skateboarding
             </h1>
