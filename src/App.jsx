@@ -14,7 +14,7 @@ const App = () => {
     <div className='font-work-sans'>
       <Navbar />
       <Hero />
-      {/* <Background/> */}
+      <Background/>
       <Shops/>
       <Celebrate/>
       <Collections/>
