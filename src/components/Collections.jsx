@@ -7,7 +7,7 @@ import img4 from '../assets/snow boots.avif'
 const Collections = () => {
   return (
     <div className='w-full'>
-        <div className='flex lg:grid  lg:grid-cols-4 py-0.5 overflow-x-scroll hide-scrollbar'>
+        <div className='flex lg:grid lg:grid-cols-4 py-0.5 overflow-x-scroll hide-scrollbar'>
             {/* the overflow helps the grid/flex images not to go out of the screen frame */}
             <div className='relative pr-0.5'>
                 <div className='w-112 sm:w-150 md:w-100 md:h-[26%] lg:w-full '>
