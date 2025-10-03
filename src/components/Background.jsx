@@ -5,32 +5,30 @@ import bgImg2 from '../assets/Bg2.avif'
 const Background = () => {
   return (
     <div className='w-full'>
-      <div className='flex lg:grid lg:grid-cols-2 overflow-x-scroll hide-scrollbar'>
+      <div className='flex lg:grid lg:grid-cols-2 overflow-x-scroll hide-scrollbar gap-1'>
           <div className='relative'>
             {/* first background image */}
-            <div className='w-112 sm:w-150 md:w-100 md:h-[26%]'>
+            <div className='w-112 sm:w-150 md:w-100 lg:w-full'>
                 <img className='w-full object-cover' src={bgImg1} alt="" />
             </div>
-            <div className='absolute left-5'>
-                <h1 className=''>
-                    United Through Skateboarding
+            <div className='absolute bottom-8 left-5 text-white font-bold'>
+                <h1 className='text-2xl'>
+                   Atiba x vans 
                 </h1>
-                <p>Celebrating connections forged through skateboarding with legendary photographer Atiba Jefferson</p>
-                <a href="">Shop the Collection</a>
+                <a className='underline' href="">Shop the Collection</a>
             </div>
           </div>
 
-          <div>
+          <div className='relative'>
             {/* second background image */}
-            <div className='relative w-112 sm:w-150 md:w-100 md:h-[26%]'>
+            <div className=' w-112 sm:w-150 md:w-100 lg:w-full'>
                 <img className='w-full object-cover' src={bgImg2} alt="" />
             </div>
-            <div className='absolute left-5'>
-                <h1 className=''>
-                    United Through Skateboarding
+            <div className='absolute bottom-8 left-5 text-white font-bold'>
+                <h1 className='text-2xl'>
+                  Introducing the BMX Proof WaffleCup
                 </h1>
-                <p>Celebrating connections forged through skateboarding with legendary photographer Atiba Jefferson</p>
-                <a href="">Shop the Collection</a>
+                <a className='underline' href="">Coming Soon</a>
             </div>
           </div>
       </div>
