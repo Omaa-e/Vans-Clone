@@ -8,8 +8,8 @@ const Background = () => {
       <div className='flex lg:grid lg:grid-cols-2 overflow-x-scroll hide-scrollbar gap-1'>
           <div className='relative'>
             {/* first background image */}
-            <div className='w-110 h-150 sm:w-150 md:w-full lg:w-full h-auto'>
-                <img className='w-full object-cover' src={bgImg1} alt="" />
+            <div className='w-110 sm:w-150 md:w-full lg:w-full h-auto'>
+                <img className='w-full h-full object-cover' src={bgImg1} alt="" />
             </div>
             {/* shadow Layout */}
             <div className='absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/85 to-transparent'></div>
@@ -37,7 +37,7 @@ const Background = () => {
                   Introducing the BMX Proof WaffleCup
                   <span className="font-extrabold absolute bottom-6 text-lg">™</span>
                 </h1>
-                <a className='underline' href="">Coming Soon</a>
+                <a className='underline' href="">Shop Vans X Odyssey</a>
             </div>
           </div>
       </div>

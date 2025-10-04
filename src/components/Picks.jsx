@@ -19,7 +19,7 @@ const Picks = () => {
         
         <div  className='flex pb-11 py-0.5 overflow-x-scroll hide-scrollbar gap-2 md:gap-1 pt-2'>
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img1} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -29,7 +29,7 @@ const Picks = () => {
           </div>
 
           <div className=''> 
-            <div className='w-112 sm:w-150 md:w-56  lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56  lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img2} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -39,7 +39,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56  lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56  lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img3} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -49,7 +49,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img4} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -59,7 +59,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img5} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -69,7 +69,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img6} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -79,7 +79,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img7} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -89,7 +89,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img8} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -99,7 +99,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img9} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
@@ -109,7 +109,7 @@ const Picks = () => {
           </div>
 
           <div className=''>
-            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-95'>
+            <div className='w-112 sm:w-150 md:w-56 lg:w-78 xl:w-115'>
                 <img className='w-full h-auto' src={img10} alt="" />
             </div>
             <div className='pl-2 pt-2 font-bold'>
