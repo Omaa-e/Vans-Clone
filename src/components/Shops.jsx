@@ -12,8 +12,8 @@ const Shops = () => {
                 <div className='w-112 sm:w-150 md:w-full md:h-[25%] '>
                     <img className='w-full object-cover' src={img1} alt="" />
                 </div>
-                <div className='absolute bottom-7 left-4 font-bold text-white underline text-[1rem] '>
-                     <a className='text-white' href="">Shop Women's</a>
+                <div className='absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent'>
+                     <a className='absolute bottom-7 left-4 font-bold text-white underline text-[1rem]' href="">Shop Women's</a>
                 </div>
             </div>
 
