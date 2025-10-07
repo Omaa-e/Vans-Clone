@@ -9,13 +9,19 @@ import img7 from '../assets/Celebrate-hoodie1.avif'
 import img8 from '../assets/Celebrate-top-2.avif'
 import img9 from '../assets/Celebrate-socks1.avif'
 import img10 from '../assets/Celebrate-socks2.avif'
+import { GoChevronLeft } from "react-icons/go"
+import { GoChevronRight } from "react-icons/go"
 
 const Celebrate = () => {
   return (
     <div className='w-full'>
         <div className=''>
-            <div className='pt-4 pb-3 px-6 font-bold text-3xl tracking-tighter'>
+            <div className='pt-4 pb-3 px-6 font-bold text-3xl tracking-tighter flex justify-between'>
                 <h1>Celebrando Dia de los Muertos</h1>
+                <div className='text-3xl'>
+                            <GoChevronLeft className='inline-block mt-1'/>
+                            <GoChevronRight className='inline-block mt-1'/>
+                          </div>
             </div>
             <div className='flex pb-11 py-0.5 overflow-x-scroll hide-scrollbar gap-2 md:gap-1 pt-2'>
               <div className=''>

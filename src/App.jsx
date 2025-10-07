@@ -10,6 +10,7 @@ import Background from './components/Background'
 import Celebrate from './components/Celebrate'
 import Picks from './components/Picks'
 import Faves from './components/Faves'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Shops/>
       <Collections/>
       <Faves/>
+      <Footer/>
       {/* <Shop/>
       <Weather/>
       <Products/> */}

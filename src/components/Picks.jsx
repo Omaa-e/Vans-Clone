@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img1 from '../assets/Celebrate-shoe1.avif'
 import img2 from '../assets/Celebrate-shirt-1.avif'
 import img3 from '../assets/Celebrate-top-1.avif'
@@ -9,12 +9,37 @@ import img7 from '../assets/Celebrate-hoodie1.avif'
 import img8 from '../assets/Celebrate-top-2.avif'
 import img9 from '../assets/Celebrate-socks1.avif'
 import img10 from '../assets/Celebrate-socks2.avif'
+import { GoChevronLeft,GoChevronRight, GoProjectSymlink } from "react-icons/go"
 
 const Picks = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
+  const goToPrevious = () => {
+    // Logic to go to the previous item
+    setCurrentIndex((prev)=> (prev===0 ? images.length-1 : prev - 1))
+  }
+  const goToNext = () => {
+    // Logic to go to the next item
+    setCurrentIndex((prev)=> (prev + 1) % images.length)
+  }
   return (
     <div className='w-full'>
-        <div className='pt-4 pb-3 px-6 font-bold text-3xl tracking-tighter'>
+        <div className='pt-4 pb-3 px-6 font-bold text-3xl tracking-tighter flex justify-between'>
           <h1>Explore Atiba by Vans</h1>
+          <div>
+            <button
+              onClick={goToPrevious}
+              className='p-2.5 bg-white'
+              >
+              <GoChevronLeft className='inline-block mt-1'/>
+            </button>
+            <button
+              onClick={goToNext}
+            >
+              <GoChevronRight className='inline-block mt-1'/>
+            </button>
+          </div>
         </div>
         
         <div  className='flex pb-11 py-0.5 overflow-x-scroll hide-scrollbar gap-2 md:gap-1 pt-2'>
