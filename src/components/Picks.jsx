@@ -30,7 +30,7 @@ const Picks = () => {
           <div>
             <button
               onClick={goToPrevious}
-              className='p-2.5 bg-white'
+              className=' bg-white'
               >
               <GoChevronLeft className='inline-block mt-1'/>
             </button>
