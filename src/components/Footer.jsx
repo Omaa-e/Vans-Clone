@@ -45,18 +45,20 @@ function Footer () {
     },
   ]
   return (
-    <div className='w-full h-full bg-[#262424] text-white'>
-        <div className=''>
-          {footer.map((Section,item)=>(
-              <div key={item.title}
-              onClick={()=> handleToggle(Section.title)}
-               className='px-4 border-b border-[#F3F3F3]'>
-            <div  className='flex justify-between items-center py-4'>
-              <h4 className='font-bold'>{Section.title}</h4>
+    <div className='w-full h-150 bg-[#262424] text-white'>
+      <div className='pt-4 lg:w-114 lg:pt-8'>
+        {footer.map((Section,item)=>(
+          <div key={item.title}  className=' px-4 lg:px-6'>
+             <div className='border-b border-[#F3F3F3]'>
+               <button
+                onClick={()=> handleToggle(Section.title)}
+                className='cursor-pointer flex justify-between items-center py-3 w-full '>
+                {/* the cursor-pointer is to make the cursor a pointer when hovering on the accordion */}
+            
+            
+              <h4 className='font-bold '>{Section.title}</h4>
               {expandedSections[Section.title] ?(<HiOutlineChevronUp className='inline-block w-6 h-6' />) 
-              : (<HiOutlineChevronDown className='inline-block w-6 h-6' />)}
-             
-            </div>
+              : (<HiOutlineChevronDown className='inline-block w-6 h-6' />)}</button>
 
             {expandedSections[Section.title] && (
               <ul className='pb-4 space-y-2 flex-col'>
@@ -67,16 +69,28 @@ function Footer () {
               ))}
             </ul>
             )}
-        </div>
-        ))}
-        <div className=' flex space-x-1 px-2 py-4'> 
-          <p className='p-2 hover:text-[#1E98E4]'><FaXTwitter className='w-3 h-4'/></p>
-          <p className='p-2 hover:text-[#33456D]'><FaFacebookF className='w-3 h-3'/></p>
-          <p className='p-2 hover:text-[#97101E]'><FaPinterest className='w-3 h-4'/></p>
-          <p className='p-2 hover:text-[#E3221A]'><FaYoutube className='w-3 h-4'/></p>
-          <p className='p-2 hover:text-[#542F6C]'><FaInstagram className='w-3 h-4'/></p>
-        </div>
-        </div>
+             </div>
+          </div>
+      ))}
+      <div className=' flex space-x-1 px-2 py-4'> 
+        <p className='p-2 hover:text-[#1E98E4]'><FaXTwitter className='w-3 h-4'/></p>
+        <p className='p-2 hover:text-[#33456D]'><FaFacebookF className='w-3 h-3'/></p>
+        <p className='p-2 hover:text-[#97101E]'><FaPinterest className='w-3 h-4'/></p>
+        <p className='p-2 hover:text-[#E3221A]'><FaYoutube className='w-3 h-4'/></p>
+        <p className='p-2 hover:text-[#542F6C]'><FaInstagram className='w-3 h-4'/></p>
+      </div>
+      
+      {/* the lowest section of the footer */}
+      <div className="underline flex flex-wrap gap-2 text-xs px-4">
+        <p>Modern Slavery Statement</p>
+        <p>Privacy Policy</p>
+        <p>Your Privacy Choices</p>
+        <p>Terms of Use</p>
+        <p>Accessibility Statement</p>
+        <p>Notice at Collection</p>
+        <p>Cookie Preferences</p>
+      </div>
+    </div>
     </div>
   )
 }
