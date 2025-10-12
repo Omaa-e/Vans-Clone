@@ -24,27 +24,23 @@ const Navbar = () => {
              
             </div>
             {/* right menu */}
-            <div className='flex items-center space-x-1'>
+            <div className='items-center space-x-1 hidden lg:flex'>
                 <p className="p-2 hover:bg-[#F3F3F3]"> <CgUser className=' w-6 h-6  ' /> </p>
                 <p className="p-2 hover:bg-[#F3F3F3] lg:block"> <HiOutlineSparkles className=' w-6 h-6  ' /> </p>
                 <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
                 <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
             </div>
 
+              {/* Small to medium Screen */}
+            <div className='flex items-center space-x-1 lg:hidden'>
+                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
+                <p className="p-2 hover:bg-[#F3F3F3] lg:block"> <CgUser className=' w-6 h-6  ' /> </p>
+                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
+                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineMenu className=' w-6 h-6  ' /> </p>
+            </div>
+
         </div>
 
-
-
-        {/* Menu clicked */}
-        {menuOpen && (
-            <div className= 'fixed inset-0  bg-opacity-50'>
-                <div>
-                    <button onClick={() => setMenuOpen(false)} className='text-right mb-12'>
-                        <GrClose className='w-8 h-8 text-right bg-white m-4'/>
-                    </button>
-                </div>
-            </div>
-        )}
     </div>
   )
 }
