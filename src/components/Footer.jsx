@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa6"
 import { FaPinterest } from "react-icons/fa"
 import { FaYoutube } from "react-icons/fa6"
 import { FaInstagram } from "react-icons/fa6"
+import img from '../assets/US flag.svg'
 
 
 function Footer () {
@@ -72,12 +73,23 @@ function Footer () {
              </div>
           </div>
       ))}
-      <div className=' flex space-x-1 px-2 py-4'> 
+      {/* Social Media Links */}
+      <div className='flex flex-col'>
+        <div className=' flex space-x-1 px-2 pt-4 pb-0'> 
         <p className='p-2 hover:text-[#1E98E4]'><FaXTwitter className='w-3 h-4'/></p>
         <p className='p-2 hover:text-[#33456D]'><FaFacebookF className='w-3 h-3'/></p>
         <p className='p-2 hover:text-[#97101E]'><FaPinterest className='w-3 h-4'/></p>
         <p className='p-2 hover:text-[#E3221A]'><FaYoutube className='w-3 h-4'/></p>
         <p className='p-2 hover:text-[#542F6C]'><FaInstagram className='w-3 h-4'/></p>
+      </div>
+
+      {/* Flag & location Section */}
+      <div className='flex px-4 pt-0 pb-5'>
+        <img className='w-6  pr-2 ' src={img} alt="" />
+        <div className='text-sm hover:underline'>
+          <p><a href="#">EN <span>|</span> Change Location</a></p>
+        </div>
+      </div>
       </div>
       
       {/* the lowest section of the footer */}
