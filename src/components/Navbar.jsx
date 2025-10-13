@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { HiOutlineMenu,HiOutlineSearch,HiOutlineShoppingCart } from "react-icons/hi"
 import img from '../assets/vans.png'
 import { CgUser } from "react-icons/cg";
@@ -6,37 +6,53 @@ import { HiOutlineSparkles } from "react-icons/hi2";
 import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] =useState(false)
+    
+    useEffect(()=> {
+        const handleScroll = ()=>{
+            if (window.scrollY > 0){
+                setIsScrolled(true)
+            } else{
+                setIsScrolled(false)
+            }
+        }
+        window.addEventListener("scroll", handleScroll)
+ 
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+
+    }, [])
   return (
-    <div className='w-full items-center fixed z-10 '>
+    <div className={`w-full items-center fixed z-10 transition-colors duration-300 ${isScrolled ? "bg-white" : "bg-transparent"} `}>
         {/* left menu */}
         <div className=' relative flex justify-between  items-center lg:px-3 py-2 space-x-4'>
-            <div onClick={() => setMenuOpen(true) } className='hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block  '>
-                <HiOutlineMenu className='w-7 h-7 hover:bg-[#B9B9B9] ' />
+            <div className={`hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block ${isScrolled ? 'hover:bg-[#F3F3F3]' : "text-white"}`}>
+                <HiOutlineMenu className={`w-7 h-7 hover:bg-[#B9B9B9] ${isScrolled ? "text-black" : 'hover:bg-black'}`} />
  
             </div>
 
             {/* logo */}
             <div className= 'px-4 lg:absolute left-1/2 transform-translate-x-1/2 '> 
                         {/* this transforms the logo to be centered */}
-                <img src={img} alt="vans logo" className='filter brightness-0 invert w-15 py-4 transition-transform duration-300 lg:hover:rotate-[-4deg]' />
+                <img src={img} alt="vans logo" className={`w-15 py-4 transition-transform duration-300 lg:hover:rotate-[-4deg] ${isScrolled? '' : 'filter brightness-0 invert'}`} />
              {/* The transition-transform and hover is to make the logo tilt to the right when hovered on */}
              
             </div>
             {/* right menu */}
-            <div className='items-center space-x-1 hidden lg:flex'>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <CgUser className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3] lg:block"> <HiOutlineSparkles className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
+            <div className={`items-center space-x-1 hidden lg:flex ${isScrolled ? "text-black" : "text-white"}`}>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <CgUser className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineSparkles className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
             </div>
 
               {/* Small to medium Screen */}
-            <div className='flex items-center space-x-1 lg:hidden'>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3] lg:block"> <CgUser className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
-                <p className="p-2 hover:bg-[#F3F3F3]"> <HiOutlineMenu className=' w-6 h-6  ' /> </p>
+            <div className={`flex items-center space-x-1 lg:hidden ${isScrolled ? "text-black" : "text-white"}`}>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineShoppingCart className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <CgUser className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineSearch className=' w-6 h-6  ' /> </p>
+                <p className={`p-2 ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}> <HiOutlineMenu className=' w-6 h-6  ' /> </p>
             </div>
 
         </div>
