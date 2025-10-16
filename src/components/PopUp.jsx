@@ -1,17 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img1 from '../assets/Vans.png'
 import img2 from '../assets/Vanss Family.png'
 import { HiOutlineX } from "react-icons/hi"
 
 const PopUp = () => {
+    const [isOpen, setIsOpen] = useState(true);
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleClose = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+            setIsOpen(false);
+        }, 300);
+    }
+    if(!isOpen) return null;
   return (
     <div className='w-full h-full '>
-        <div className='w-full fixed bottom-0 items-center bg-white  pb-7'>
+        <div className='w-full fixed bottom-0 items-center bg-white  pb-7 sm:right-4 sm:bottom-0 sm:w-96'>
             <div className='border-b border-gray-300 flex px-4 justify-between py-4'>
                 <div className=''>
                     <img className='w-16' src={img1} alt="" />
                 </div>
-                <HiOutlineX className='w-6 h-6'/>
+                <button className={`${isClosing ? 'fade-out' : 'fade-in'}`}
+                onClick={handleClose}>
+                     <HiOutlineX className='w-6 h-6'/>
+                </button>
+               
             </div>
             <div className='px-4'>
                 <div className='justify-center text-center'>
