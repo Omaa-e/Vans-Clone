@@ -46,8 +46,8 @@ function Footer () {
     },
   ]
   return (
-    <div className='w-full h-150 bg-[#262424] text-white'>
-      <div className='pt-4 lg:w-114 lg:pt-8'>
+    <div className='w-full h-140 bg-[#262424] text-white lg:h-full'>
+      <div className='py-4 lg:w-114 lg:pt-5'>
         {footer.map((Section,item)=>(
           <div key={item.title}  className=' px-4 lg:px-6'>
              <div className='border-b border-[#F3F3F3]'>
@@ -74,34 +74,37 @@ function Footer () {
           </div>
       ))}
       {/* Social Media Links */}
-      <div className='flex flex-col'>
-        <div className=' flex space-x-1 px-2 pt-4 pb-0'> 
-        <p className='p-2 hover:text-[#1E98E4]'><FaXTwitter className='w-3 h-4'/></p>
-        <p className='p-2 hover:text-[#33456D]'><FaFacebookF className='w-3 h-3'/></p>
-        <p className='p-2 hover:text-[#97101E]'><FaPinterest className='w-3 h-4'/></p>
-        <p className='p-2 hover:text-[#E3221A]'><FaYoutube className='w-3 h-4'/></p>
-        <p className='p-2 hover:text-[#542F6C]'><FaInstagram className='w-3 h-4'/></p>
-      </div>
-
-      {/* Flag & location Section */}
-      <div className='flex px-4 pt-0 pb-5'>
-        <img className='w-6  pr-2 ' src={img} alt="" />
-        <div className='text-sm hover:underline'>
-          <p><a href="#">EN <span>|</span> Change Location</a></p>
+      <div className='lg:pt-25'>
+        <div className='flex flex-col'>
+        <div className=' flex space-x-1 px-4 pt-4 pb-0'> 
+          <p className='p-2 hover:text-[#1E98E4]'><FaXTwitter className='w-3 h-4'/></p>
+          <p className='p-2 hover:text-[#33456D]'><FaFacebookF className='w-3 h-3'/></p>
+          <p className='p-2 hover:text-[#97101E]'><FaPinterest className='w-3 h-4'/></p>
+          <p className='p-2 hover:text-[#E3221A]'><FaYoutube className='w-3 h-4'/></p>
+          <p className='p-2 hover:text-[#542F6C]'><FaInstagram className='w-3 h-4'/></p>
         </div>
-      </div>
+
+        {/* Flag & location Section */}
+        <div className='flex px-5 pt-0 pb-5'>
+          <img className='w-6  pr-2 ' src={img} alt="" />
+          <div className='text-sm hover:underline'>
+            <p><a href="#">EN <span>|</span> Change Location</a></p>
+          </div>
+        </div>
       </div>
       
       {/* the lowest section of the footer */}
-      <div className="underline flex flex-wrap gap-2 text-xs px-4">
-        <p>Modern Slavery Statement</p>
-        <p>Privacy Policy</p>
-        <p>Your Privacy Choices</p>
-        <p>Terms of Use</p>
-        <p>Accessibility Statement</p>
-        <p>Notice at Collection</p>
-        <p>Cookie Preferences</p>
+        <div className="underline flex flex-wrap gap-2 text-xs px-4">
+          <p>Modern Slavery Statement</p>
+          <p>Privacy Policy</p>
+          <p>Your Privacy Choices</p>
+          <p>Terms of Use</p>
+          <p>Accessibility Statement</p>
+          <p>Notice at Collection</p>
+          <p>Cookie Preferences</p>
+        </div>
       </div>
+      
     </div>
     </div>
   )

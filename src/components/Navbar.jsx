@@ -27,9 +27,8 @@ const Navbar = () => {
     <div className={`w-full items-center fixed z-10 transition-colors duration-300 ${isScrolled ? "bg-white" : "bg-transparent"} `}>
         {/* left menu */}
         <div className=' relative flex justify-between  items-center lg:px-3 py-2 space-x-4'>
-            <div className={`hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block ${isScrolled ? 'hover:bg-[#F3F3F3]' : "text-white"}`}>
-                <HiOutlineMenu className={`w-7 h-7 hover:bg-[#B9B9B9] ${isScrolled ? "text-black" : 'hover:bg-black'}`} />
- 
+            <div className={`hidden lg:items-center space-x-1 p-2 hover:bg-[#F3F3F3] lg:block ${isScrolled ? 'hover:bg-[#F3F3F3]' : 'hover:bg-black'}`}>
+                <HiOutlineMenu className={`w-7 h-7  ${isScrolled ? "text-black" : "text-white"}`} />
             </div>
 
             {/* logo */}

@@ -7,9 +7,9 @@ const Hero = () => {
             <img className='w-full h-[730px] object-cover' src={bgImg} alt="hero image" />
         </div>
         {/* Shadow Layout */}
-         <div className='absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent'></div>
+         {/* <div className='absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent'></div> */}
          {/* Text on top */}
-        <div className='absolute bottom-6 left-4 text-white font-bold'>
+        <div className='absolute bottom-2 left-4 text-white font-bold'>
             <h1 className='text-4xl md:w-[89%] md:text-4xl lg:w-[70%] lg:text-6xl font-extrabold xl:w-[100%] leading-tight capitalize'>now in: premium super lowpro</h1>
             <p className='py-2 lg:text-[1.2rem]'>A full-leather take on a retro silhouette, now in fresh colors.</p>
             <a className='underline text-[1.2rem]' href="">Shop Now</a>

@@ -16,12 +16,12 @@ const Celebrate = () => {
   return (
     <div className='w-full'>
         <div className=''>
-            <div className='pt-4 pb-3 px-6 font-bold text-3xl tracking-tighter flex justify-between'>
-                <h1>Celebrando Dia de los Muertos</h1>
-                <div className='text-3xl'>
-                            <GoChevronLeft className='inline-block mt-1'/>
-                            <GoChevronRight className='inline-block mt-1'/>
-                          </div>
+            <div className='pt-4 pb-3 px-6 font-bold text-xl sm:text-3xl tracking-tighter flex justify-between'>
+                <h1 className='text-center'>Celebrando Dia de los Muertos</h1>
+                <div className=''>
+                  <GoChevronLeft className='inline-block mt-1'/>
+                  <GoChevronRight className='inline-block mt-1'/>
+                </div>
             </div>
             <div className='flex pb-11 py-0.5 overflow-x-scroll hide-scrollbar gap-2 md:gap-1 pt-2'>
               <div className=''>
