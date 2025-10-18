@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React, {useState} from 'react'
 import Navbar from './components/Navbar'
 import Shop from './product/Shop'
@@ -15,21 +16,27 @@ import PopUp from './components/PopUp'
 
 const App = () => {
   return (
-    <div className='font-work-sans'>
-      <Navbar />
-      <Hero />
-      <Picks/>
-      <Background/>
-      <Celebrate/>
-      <Shops/>
-      <Collections/>
-      <Faves/>
-      <Footer/>
-      <PopUp/>
-      {/* <Shop/>
-      <Weather/>
-      <Products/> */}
-    </div>
+    <Router>
+      <div className='font-work-sans'>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<>
+          <Hero />
+          <Picks/>
+          <Background/>
+          <Celebrate/>
+          <Shops/>
+          <Collections/>
+          <Faves/>
+          <Footer/>
+          <PopUp/>
+          {/* <Shop/>
+          <Weather/>
+          <Products/> */}
+          </>} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

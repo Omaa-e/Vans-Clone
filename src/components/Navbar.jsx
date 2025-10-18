@@ -4,6 +4,7 @@ import img from '../assets/vans.png'
 import { CgUser } from "react-icons/cg";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { GrClose } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] =useState(false)
@@ -32,9 +33,12 @@ const Navbar = () => {
             </div>
 
             {/* logo */}
-            <div className= 'px-4 lg:absolute left-1/2 transform-translate-x-1/2 '> 
-                        {/* this transforms the logo to be centered */}
-                <img src={img} alt="vans logo" className={`w-15 py-4 transition-transform duration-300 lg:hover:rotate-[-4deg] ${isScrolled? '' : 'filter brightness-0 invert'}`} />
+            <div className= 'px-10 lg:absolute left-1/2 transform -translate-x-1/2 '> 
+                {/* this transforms the logo to be centered */}
+                
+                    <img src={img} alt="vans logo" className={`w-15 py-4 transition-transform duration-300 lg:hover:rotate-[-4deg] ${isScrolled? '' : 'filter brightness-0 invert'}`} />
+                
+
              {/* The transition-transform and hover is to make the logo tilt to the right when hovered on */}
              
             </div>
