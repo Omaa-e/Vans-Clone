@@ -30,7 +30,7 @@ const PopUp = () => {
                         Join Vans Family to Get 15% Off Your First Order + Free Shipping!
                     </h1>
                     <button className='w-full font-bold bg-black text-white py-4 px-4 items-center flex justify-center my-6'>Join Now</button>
-                    <p className='text-sm tracking-tighter pb-4 leading-4'>* Terms and Conditions apply. Offer Auto-Applies in cart, no code necessary. Offer valid for new Vans Family members for 7-days after registration on Vans.com or Vans Family app.</p>
+                    <p className='text-[12px] tracking-tighter pb-4'>* Terms and Conditions apply. Offer Auto-Applies in cart, no code necessary. Offer valid for new Vans Family members for 7-days after registration on Vans.com or Vans Family app.</p>
                 </div>
             </div>
         </div>

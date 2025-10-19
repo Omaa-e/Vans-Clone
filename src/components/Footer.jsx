@@ -13,16 +13,16 @@ function Footer () {
   const [expandedSections, setExpandedSections] = useState({});
   const handleToggle =(Section)=> {
     setExpandedSections(prev =>({
-      // ...prev prevents other sections to open when one accordion is opened
       ...prev,
-      [Section]: !prev[Section] // toggles the current section
+      [Section]: !prev[Section]
     }))
   }
 
   const footer = [
     {
       title: "Featured",
-      links:["Extra Comfort Shoes", "Chunky & Retro Shoes", "Customize Our Shoes","Slip On Shoes", "Mary Jane Shoes","Platform Shoes", "Skate Shoes", "Sandals ad Slides", "Offers & Promotions", "Gift Cards"]
+      links:[
+        {name: "Extra Comfort Shoes"}, "Chunky & Retro Shoes", "Customize Our Shoes","Slip On Shoes", "Mary Jane Shoes","Platform Shoes", "Skate Shoes", "Sandals ad Slides", "Offers & Promotions", "Gift Cards"]
     },
     {
       title: "Icons",
@@ -48,14 +48,12 @@ function Footer () {
   return (
     <div className='w-full h-140 bg-[#262424] text-white lg:h-full'>
       <div className='py-4 lg:w-114 lg:pt-5'>
-        {footer.map((Section,item)=>(
-          <div key={item.title}  className=' px-4 lg:px-6'>
+        {footer.map((Section, index)=>(
+          <div key={Section.title} className=' px-4 lg:px-6'>
              <div className='border-b border-[#F3F3F3]'>
                <button
                 onClick={()=> handleToggle(Section.title)}
                 className='cursor-pointer flex justify-between items-center py-3 w-full '>
-                {/* the cursor-pointer is to make the cursor a pointer when hovering on the accordion */}
-            
             
               <h4 className='font-bold '>{Section.title}</h4>
               {expandedSections[Section.title] ?(<HiOutlineChevronUp className='inline-block w-6 h-6' />) 
@@ -63,8 +61,8 @@ function Footer () {
 
             {expandedSections[Section.title] && (
               <ul className='pb-4 space-y-2 flex-col'>
-              {Section.links.map((link, index) => (
-                <li key={index}>
+              {Section.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
                   <a href="#">{link}</a>
                 </li>
               ))}
