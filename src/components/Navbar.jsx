@@ -35,8 +35,10 @@ const Navbar = () => {
             {/* logo */}
             <div className= 'relative flex justify-end items-center lg:px-3 py-2 lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2'> 
                 {/* this transforms the logo to be centered */}
-                
+                <Link to="/">
                     <img src={img} alt="vans logo" className={`w-15 transition-transform duration-300 lg:hover:rotate-[-4deg] ${isScrolled? '' : 'filter brightness-0 invert'}`} />
+                </Link>
+                    
                 
 
              {/* The transition-transform and hover is to make the logo tilt to the right when hovered on */}

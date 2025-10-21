@@ -8,7 +8,7 @@ const Collections = () => {
       <div className='flex lg:grid lg:grid-cols-2 overflow-x-scroll hide-scrollbar gap-1'>
           <div className='relative'>
             {/* first background image */}
-            <div className='w-110 h-150 sm:w-150 md:w-full lg:w-full h-auto'>
+            <div className='w-110 h-90 sm:w-150 md:w-full lg:w-full '>
                 <img className='w-full object-cover' src={bgImg1} alt="" />
             </div>
             {/* shadow Layout */}
@@ -25,7 +25,7 @@ const Collections = () => {
 
           <div className='relative'>
             {/* second background image */}
-            <div className=' w-99 h-200 sm:w-150 md:w-full lg:w-full h-auto'>
+            <div className=' w-110 sm:w-150 md:w-full lg:w-full'>
                 <img className='w-full object-cover' src={bgImg2} alt="" />
             </div>
             {/* shadow Layout */}
